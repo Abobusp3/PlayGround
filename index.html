@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>The Last Shift</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="hud">
+        <div class="hud-group left">
+          <div class="stat"><span>TIME</span><strong id="timeLabel">10:00 PM</strong></div>
+          <div class="stat"><span>POWER</span><strong id="powerLabel">82%</strong></div>
+          <div class="stat"><span>BATTERY</span><strong id="batteryLabel">100%</strong></div>
+        </div>
+        <div class="hud-group right">
+          <div class="stat"><span>STATUS</span><strong id="statusLabel">Shift alive</strong></div>
+        </div>
+      </header>
+
+      <main class="game-panel">
+        <canvas id="gameCanvas" width="960" height="600" aria-label="The Last Shift game"></canvas>
+
+        <div id="messageBox" class="message-box">Your shift begins. Keep the station alive.</div>
+
+        <aside class="side-panel">
+          <section>
+            <h2>Objectives</h2>
+            <ul id="objectiveList"></ul>
+          </section>
+          <section>
+            <h2>Inventory</h2>
+            <ul id="inventoryList"></ul>
+          </section>
+        </aside>
+      </main>
+
+      <div class="controls-wrap">
+        <div class="touch-pad" aria-label="Touch controls">
+          <button class="move-btn up" data-key="ArrowUp">▲</button>
+          <button class="move-btn left" data-key="ArrowLeft">◀</button>
+          <button class="move-btn down" data-key="ArrowDown">▼</button>
+          <button class="move-btn right" data-key="ArrowRight">▶</button>
+        </div>
+        <div class="action-buttons">
+          <button id="interactButton">Interact</button>
+          <button id="cameraButton">Cameras</button>
+          <button id="flashlightButton">Flashlight</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
